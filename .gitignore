@@ -19,6 +19,11 @@ trainers/master-hub.user.js
 trainers/shared/
 trainers/README.md
 
+# Internal Game Dev Modules (Raw Sources)
+trainers/games/**/modules/
+trainers/games/**/trainer.user.js
+trainers/games/**/metadata.json
+
 # Environment Variables & Secrets
 .env*
 *.pem
