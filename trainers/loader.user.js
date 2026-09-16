@@ -17,8 +17,8 @@
   'use strict';
 
   // URL CDN GitHub (Ganti <username> dan <repo> dengan akun GitHub kamu)
-  // Contoh: https://cdn.jsdelivr.net/gh/username/repo@main/dist/hub.core.js
-  const REMOTE_HUB_URL = 'https://raw.githubusercontent.com/trainer-modding/web-trainers/main/dist/hub.core.js';
+  // Raw CDN URL for production distribution
+  const REMOTE_HUB_URL = 'https://raw.githubusercontent.com/kentiers/web-trainers/main/dist/hub.min.js';
 
   // Fallback lokal jika sedang dalam tahap development offline
   const LOCAL_CACHE_KEY = '__TRAINER_HUB_CACHE__';
