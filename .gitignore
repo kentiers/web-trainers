@@ -10,6 +10,7 @@ bun.lock*
 .claude/
 skills-lock.json
 .omp/
+AGENTS.md
 
 # Internal Architecture, Unminified Cores & Dev Guides (Dapur Developer)
 trainers/dist/hub.core.js
@@ -18,6 +19,7 @@ trainers/DEPLOY_GUIDE.md
 trainers/master-hub.user.js
 trainers/shared/
 trainers/README.md
+trainers/RE_FRAMEWORK_RULES.md
 
 # Internal Game Dev Modules (Raw Sources) & Console Loaders
 trainers/games/**/modules/
