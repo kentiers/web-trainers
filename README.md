@@ -6,16 +6,12 @@ A collection of lightweight browser game trainers with a clean HUD overlay and h
 
 ## Installation
 
-### Via Tampermonkey (Recommended)
-1. Install [Tampermonkey](https://www.tampermonkey.net/).
-2. Install the loader script:
+1. Install the [Tampermonkey](https://www.tampermonkey.net/) extension for your browser.
+2. Install the trainer loader script:
    👉 **[Install `loader.user.js`](https://raw.githubusercontent.com/kentiers/web-trainers/main/trainers/loader.user.js)**
-3. Open any supported game on CrazyGames or Poki.
+3. Open any supported game on CrazyGames or Poki. The mod menu will activate automatically.
 
-### Via DevTools Console
-1. Open the game in your browser and press `F12`.
-2. Select the game frame in the console dropdown.
-3. Paste the contents of `trainers/games/<game>/<version>/console-loader.js` and press `Enter`.
+*All game profiles and updates are pulled automatically from this repository.*
 
 ---
 
@@ -26,7 +22,7 @@ A collection of lightweight browser game trainers with a clean HUD overlay and h
 
 ---
 
-## Default Controls
+## Controls
 
 * **`INSERT`** — Show / Hide Trainer
 * **`NUMPAD 1`** — God Mode

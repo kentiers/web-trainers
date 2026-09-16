@@ -19,10 +19,11 @@ trainers/master-hub.user.js
 trainers/shared/
 trainers/README.md
 
-# Internal Game Dev Modules (Raw Sources)
+# Internal Game Dev Modules (Raw Sources) & Console Loaders
 trainers/games/**/modules/
 trainers/games/**/trainer.user.js
 trainers/games/**/metadata.json
+trainers/games/**/console-loader.js
 
 # Environment Variables & Secrets
 .env*
