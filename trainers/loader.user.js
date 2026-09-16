@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Universal Web Game Trainer Hub (Client Loader)
 // @namespace    https://github.com/trainer-modding/web-trainers
-// @version      1.0.0
-// @description  Ultra-light dynamic loader for Universal Web Game Trainer
+// @version      1.1.0
+// @description  Ultra-light dynamic loader with cache-busting
 // @author       Trainer Modding Lab
 // @match        https://www.crazygames.com/*
 // @match        https://games.crazygames.com/*
@@ -16,12 +16,9 @@
 (function () {
   'use strict';
 
-  // URL CDN GitHub (Ganti <username> dan <repo> dengan akun GitHub kamu)
-  // Raw CDN URL for production distribution (trainers/dist/hub.min.js)
-  const REMOTE_HUB_URL = 'https://raw.githubusercontent.com/kentiers/web-trainers/main/trainers/dist/hub.min.js';
-
-  // Fallback lokal jika sedang dalam tahap development offline
-  const LOCAL_CACHE_KEY = '__TRAINER_HUB_CACHE__';
+  // Tambahkan timestamp query parameter (?t=...) agar GitHub CDN dan browser TIDAK PERNAH meng-cache versi lama
+  const REMOTE_HUB_BASE = 'https://raw.githubusercontent.com/kentiers/web-trainers/main/trainers/dist/hub.min.js';
+  const NO_CACHE_URL = `${REMOTE_HUB_BASE}?t=${Date.now()}`;
 
   function injectScript(code) {
     const s = document.createElement('script');
@@ -30,19 +27,18 @@
     s.remove();
   }
 
-  // Load core engine dari GitHub CDN
-  fetch(REMOTE_HUB_URL)
+  fetch(NO_CACHE_URL, { cache: 'no-store' })
     .then((res) => {
-      if (!res.ok) throw new Error('CDN response not ok');
+      if (!res.ok) throw new Error('CDN response error');
       return res.text();
     })
     .then((code) => {
-      sessionStorage.setItem(LOCAL_CACHE_KEY, code);
       injectScript(code);
     })
     .catch((err) => {
-      console.warn('[Trainer Loader] Fetching from CDN failed, using cached fallback...', err);
-      const cached = sessionStorage.getItem(LOCAL_CACHE_KEY);
-      if (cached) injectScript(cached);
+      console.warn('[Trainer Loader] Fetching without cache failed, retrying base URL...', err);
+      fetch(REMOTE_HUB_BASE)
+        .then(r => r.text())
+        .then(injectScript);
     });
 })();
