@@ -19,6 +19,7 @@ mcp.json
 AGENTS.md
 
 # Internal Architecture, Unminified Cores & Dev Guides (Dapur Developer)
+docs/
 trainers/dist/hub.core.js
 trainers/scripts/
 trainers/DEPLOY_GUIDE.md
