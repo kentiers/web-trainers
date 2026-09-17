@@ -32,3 +32,4 @@ Lightweight browser game trainer and WebGL/WebAssembly runtime diagnostic overla
 Integrated CLI tools for inspecting game binaries:
 * `npm run analyze:wat` — Disassemble `.wasm` into WebAssembly text (`.wat`) via WABT.
 * `npm run analyze:il2cpp` — Dump Unity C# classes and methods via Il2CppDumper.
+* `npm run tool:mcp:cheatengine` — Start Cheat Engine MCP Bridge for AI memory analysis & pointer scanning.

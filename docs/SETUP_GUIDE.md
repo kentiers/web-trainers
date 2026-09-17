@@ -50,6 +50,12 @@ node tools/scripts/run-il2cppdumper.js path/to/game.wasm path/to/global-metadata
 ```
 *Skrip akan otomatis mengekstrak seluruh deklarasi Class, Method, dan offset ke folder tujuan dalam bentuk berkas `dump.cs`.*
 
+### D. Menjalankan Cheat Engine MCP Bridge (AI Memory Analysis)
+Gunakan MCP server ini agar AI agent dapat membaca dan menganalisis memory game langsung dari Cheat Engine:
+```bash
+npm run tool:mcp:cheatengine
+```
+*Cheat Engine harus terbuka dan memuat `tools/cheatengine-mcp-bridge/MCP_Server/ce_mcp_bridge.lua`.*
 ---
 
 ## 3. Bukti Verifikasi Terminal

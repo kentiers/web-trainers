@@ -7,10 +7,13 @@ bun.lock*
 
 # Reverse Engineering & Analysis Tools
 tools/
+trainers/games/**/analysis/
 # AI Agent Configs & Internal Skills
 .agents/
 .claude/
 skills-lock.json
+.cursor/
+mcp.json
 .omp/
 AGENTS.md
 

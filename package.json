@@ -7,7 +7,8 @@
     "tool:wabt:version": "tools\\wabt\\bin\\wasm2wat.exe --version",
     "tool:il2cpp:check": "tools\\Il2CppDumper\\Il2CppDumper.exe",
     "analyze:wat": "node tools/scripts/analyze-wasm.js",
-    "analyze:il2cpp": "node tools/scripts/run-il2cppdumper.js"
+    "analyze:il2cpp": "node tools/scripts/run-il2cppdumper.js",
+    "tool:mcp:cheatengine": "tools\\cheatengine-mcp-bridge\\.venv\\Scripts\\python.exe tools/cheatengine-mcp-bridge/MCP_Server/mcp_cheatengine.py"
   },
   "keywords": [
     "webgl",
