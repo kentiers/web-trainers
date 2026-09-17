@@ -1,0 +1,30 @@
+{
+  "name": "Swarm Survivor",
+  "slug": "swarm-survivor-ygx",
+  "url": "https://www.crazygames.com/game/swarm-survivor-ygx",
+  "engine": "HTML5 Canvas (Pixi.js v8 / WebGL)",
+  "version": "1.0",
+  "tier": "Tier 1 (LocalStorage Schema Injection + Pixi.js Event Hook)",
+  "files": {
+    "standaloneUserscript": "v1.0/trainer.user.js",
+    "consoleLoader": "v1.0/console-loader.js",
+    "modules": [
+      "v1.0/modules/save-editor.js",
+      "v1.0/modules/cheats-mothership.js"
+    ]
+  },
+  "features": [
+    "Overclocked Mothership (+10,000% God HP, +5,000% Insta-Kill Damage, +2,000% Super Magnet)",
+    "+999,999 Coins & +99,999 Gems (Unlimited Economy)",
+    "Unlock All 12 Heavy Weapons & Drones",
+    "Stepped Timescale Speedhack (1.0x / 2.0x / 5.0x)",
+    "Instant Free Revive (Rewarded Ad Bypass)"
+  ],
+  "controls": {
+    "NUMPAD1": "Apply God Mode & Overclocked Mothership",
+    "NUMPAD2": "+999K Coins & +99K Gems",
+    "NUMPAD3": "Unlock All 12 Weapons",
+    "F11": "Cycle Timescale (1.0x / 2.0x / 5.0x)",
+    "INSERT": "Show / Hide Tactical HUD"
+  }
+}

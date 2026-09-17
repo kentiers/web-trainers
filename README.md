@@ -13,7 +13,8 @@ Lightweight browser game trainer and WebGL/WebAssembly runtime diagnostic overla
 
 | Game | In-Game Features (HUD Labels) |
 | :--- | :--- |
-| **Capybara Clicker 2** | Turbo Clicker (~60 clicks/s), +500 Clicks Burst, Timescale |
+| **Swarm Survivor** | Overclocked Mothership (+10K% HP, +5K% DMG, +2K% Magnet), +999K Funds, All 12 Weapons |
+| **Capybara Clicker 2** | Sprite-Locked Turbo Clicker (~60 clicks/s), +1K Burst, Timescale |
 | **Life Simulator: Road to Riches** | +$100M Cash (HDTB Serializer), Max Stats, Timescale |
 | **Idle Zombie Wave: Survivors** | God Mode, One-Hit Kill, Repair Wall, +5K Scrap, Timescale |
 | **Age of Tanks Warriors: TD War** | Timescale (1x / 2x / 5x) |
