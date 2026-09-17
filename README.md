@@ -1,29 +1,34 @@
-# Web Game Trainers
+# Web Runtime Instrumentation & Diagnostic Suite
 
-Lightweight browser game trainers with a clean HUD overlay and hotkey support.
+Academic research framework and lightweight diagnostic overlay for WebGL / WebAssembly applications with runtime telemetry and hotkey hooks.
 
-## Install
+## Installation & Setup
 
-1. Install [Tampermonkey](https://www.tampermonkey.net/).
-2. Install the loader script:
+1. Install a userscript manager such as [Tampermonkey](https://www.tampermonkey.net/).
+2. Load the diagnostic harness script:
    👉 **[loader.user.js](https://raw.githubusercontent.com/kentiers/web-trainers/main/trainers/loader.user.js)**
-3. Open any supported game on CrazyGames or Poki.
+3. Navigate to any supported WebGL/WASM application target.
 
-## Supported Games
+## Supported Runtime Targets
 
-| Game | Features |
+| Target Application | Instrumentation Capabilities |
 | :--- | :--- |
-| **Idle Zombie Wave: Survivors** | God Mode, One-Hit Kill, Repair Wall, +5K Scrap, Speedhack |
-| **Age of Tanks Warriors: TD War** | Speedhack (1x / 2x / 5x) |
-| **Dungeons and Bags** | Win Level, Heal Hero, Speedhack |
-| **Life Simulator: Road to Riches** | +$100M Cash (Hash-Verified), Max Stats, Speedhack |
-| **Universal Utility** | Instant Ad-Reward Bypass (CrazyGames & Poki) |
+| **Idle Zombie Wave: Survivors** | State Clamping, Instant Hit Dispatcher, Wall Integrity Repair, Scrap Register Injection, Time Dilation |
+| **Age of Tanks Warriors: TD War** | Time Dilation & Frame Pacing Governor (1x / 2x / 5x) |
+| **Dungeons and Bags** | Scene State Clearance, Hero Integrity Assertion, Time Dilation |
+| **Universal Utility** | Asynchronous Media SDK State-Machine Interceptor & Simulator |
 
-## Hotkeys
+## Diagnostic Controls & Hotkeys
 
-* **`INSERT`** — Show / Hide Trainer
-* **`NUMPAD 1`** — Primary Action (God Mode / Win Level / +100M Cash)
-* **`NUMPAD 2`** — Secondary Action (One-Hit Kill / Heal Hero / Max Stats)
-* **`NUMPAD 3`** — Repair Wall (Idle Zombie Wave)
-* **`NUMPAD 4`** — Add Scrap (Idle Zombie Wave)
-* **`F11`** — Speedhack (1x / 2x / 5x)
+* **`INSERT`** — Toggle Diagnostic HUD Overlay
+* **`NUMPAD 1`** — Primary Runtime Assertion / State Routine
+* **`NUMPAD 2`** — Secondary State Mutation Hook
+* **`NUMPAD 3`** — Integrity Repair Trigger
+* **`NUMPAD 4`** — Resource Allocation Dispatcher
+* **`F11`** — Virtual Clock Scaler (1x / 2x / 5x)
+
+## Binary Analysis Toolchain
+
+Integrated CLI utilities for static disassembly and metadata inspection:
+* `npm run analyze:wat` — Disassemble `.wasm` bytecode into WebAssembly Text format (`.wat`) via WABT.
+* `npm run analyze:il2cpp` — Extract Unity C# symbols, fields, and memory offsets via Il2CppDumper.
