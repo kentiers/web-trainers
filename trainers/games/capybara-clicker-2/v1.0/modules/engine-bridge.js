@@ -36,11 +36,14 @@ export class UnityEngineBridge {
     return target.dispatchEvent(ev);
   }
 
-  dispatchClick(x, y, canvas) {
+  dispatchLockedCapybaraClick(canvas) {
     const target = canvas || this.getCanvas();
     if (!target) return false;
-    this.sendMouseEvent('mousedown', x, y, target);
-    this.sendMouseEvent('mouseup', x, y, target);
+    const coords = this.getClickTargetCoords(target);
+    // Crucial: send mousemove first to pin Unity's internal cursor strictly on the Capybara sprite
+    this.sendMouseEvent('mousemove', coords.x, coords.y, target);
+    this.sendMouseEvent('mousedown', coords.x, coords.y, target);
+    this.sendMouseEvent('mouseup', coords.x, coords.y, target);
     return true;
   }
 }

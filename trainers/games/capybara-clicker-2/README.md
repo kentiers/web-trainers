@@ -4,8 +4,7 @@ Trainer profile for **Capybara Clicker 2** on CrazyGames.
 
 ## Features
 
-* **Turbo Clicker (`NUMPAD 1`)** — High-frequency synthetic event injection (~60 clicks/second) directly into Unity WebGL input pipeline.
-* **Smart Upgrade (`NUMPAD 2`)** — Automated tier buyer that continuously purchases upgrades from top to bottom for true AFK progression.
-* **Unlock All & 999 Spins (`NUMPAD 3`)** — Injects 100% unlocked skins, backgrounds, weathers, accessories, 999 wheel spins, and a 10,000x ascension multiplier into `Stats.dat`.
-* **Timescale (`F11`)** — Cycle game simulation speed (1x / 2x / 5x) for 500% faster passive generation, weather cycles, and golden capybaras.
-* **Ad-Reward Bypass** — Skip rewarded ads directly for instant 2x multipliers and wheel spins.
+* **Sprite-Locked Turbo Clicker (`NUMPAD 1`)** — High-frequency synthetic event injection (~60 clicks/second) strictly locked onto the Capybara sprite coordinates. Does not follow physical mouse movement.
+* **+1,000 Clicks Burst (`NUMPAD 2`)** — Smooth high-speed burst of 1,000 clicks fired directly onto the Capybara sprite.
+* **Timescale (`F11`)** — Cycle game simulation speed (1x / 2x / 5x / 10x) for up to 1,000% faster passive generation, weather cycles, and golden capybaras.
+* **Ad-Reward Bypass** — Skip rewarded ads directly for instant 2x multipliers and free wheel spins.
