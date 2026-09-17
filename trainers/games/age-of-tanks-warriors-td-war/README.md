@@ -1,8 +1,8 @@
 # Age of Tanks Warriors: TD War
 
-Trainer profile for **Age of Tanks Warriors: TD War** on CrazyGames.
+Runtime diagnostic profile for **Age of Tanks Warriors: TD War** on CrazyGames.
 
-## Features
+## Diagnostic Capabilities
 
-* **Speedhack** — Cycle game speed (1x / 2x / 5x).
-* **Ad-Reward Bypass** — Skip rewarded ads directly to claim cards and coins.
+* **Virtual Clock Scaler** — Cycle runtime frame pacing and time dilation (1x / 2x / 5x).
+* **Asynchronous Media Simulation** — Resolve rewarded video requests instantly to verify asset allocation routines.

@@ -1,11 +1,11 @@
 # Idle Zombie Wave: Survivors
 
-Trainer profile for **Idle Zombie Wave: Survivors** on CrazyGames.
+Runtime diagnostic profile for **Idle Zombie Wave: Survivors** on CrazyGames.
 
-## Features
+## Diagnostic Capabilities
 
-* **God Mode** — Complete barrier invulnerability.
-* **One-Hit Kill** — Eliminate enemies in a single shot.
-* **Repair Wall** — Instantly restore barricade health.
-* **+5K Scrap** — Add scrap currency directly during waves.
-* **Speedhack** — Cycle game speed (1x / 2x / 5x).
+* **Barrier State Clamping** — Maintain barricade health persistence.
+* **Instant Hit Dispatcher** — Eliminate hostile units in a single damage cycle.
+* **Integrity Restoration** — Restore barricade health to maximum capacity.
+* **Scrap Register Injection** — Allocate resource units dynamically during waves.
+* **Virtual Clock Scaler** — Cycle runtime pacing (1x / 2x / 5x).
