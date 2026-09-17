@@ -1,0 +1,29 @@
+{
+  "name": "Capybara Clicker 2",
+  "slug": "capybara-clicker-2",
+  "url": "https://www.crazygames.com/game/capybara-clicker-2",
+  "engine": "Unity WebGL (C# / WebAssembly)",
+  "version": "1.0",
+  "tier": "Tier 2 (Unity WebGL Synthetic Event + Timescale Hook)",
+  "files": {
+    "standaloneUserscript": "v1.0/trainer.user.js",
+    "consoleLoader": "v1.0/console-loader.js",
+    "modules": [
+      "v1.0/modules/engine-bridge.js",
+      "v1.0/modules/cheats-clicker.js",
+      "v1.0/modules/save-editor.js"
+    ]
+  },
+  "features": [
+    "Continuous Turbo Auto-Clicker (~60 clicks/sec)",
+    "+500 Clicks Instant Burst",
+    "Stepped Timescale Speedhack (1.0x / 2.0x / 5.0x)",
+    "Universal Ad-Reward Bypass (Instant Multipliers & Free Spins)"
+  ],
+  "controls": {
+    "NUMPAD1": "Toggle Turbo Clicker",
+    "NUMPAD2": "+500 Clicks Instant Burst",
+    "F11": "Cycle Timescale (1.0x / 2.0x / 5.0x)",
+    "INSERT": "Show / Hide Tactical HUD"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Dungeons and Bags",
+  "slug": "dungeons-and-bags",
+  "url": "https://www.crazygames.com/game/dungeons-and-bags",
+  "engine": "Unity WebGL",
+  "storage": "CrazyGames SDK Storage (SDK_DATA_70791 -> dungeon.json)",
+  "features": [
+    "Permanent Gold Coins (+500,000)",
+    "Permanent Diamonds / Currency (+50,000)",
+    "Max Base Upgrades (Health, Strength, Luck, Dodge)",
+    "Unlock All 5 Heroes",
+    "Universal Speedhack",
+    "Instant Ad-Reward Bypass"
+  ]
+}

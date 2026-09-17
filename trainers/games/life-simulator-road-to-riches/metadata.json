@@ -1,0 +1,12 @@
+{
+  "name": "Life Simulator: Road to Riches",
+  "slug": "life-simulator-road-to-riches",
+  "url": "https://www.crazygames.com/game/life-simulator-road-to-riches",
+  "engine": "Defold Engine (WebAssembly + Lua)",
+  "version": "1.1.0.0",
+  "tier": "Tier 3 (WASM + Checksum-Hashed Storage)",
+  "features": [
+    "Stepped Speedhack (1x / 2x / 5x Timescale)",
+    "Instant Ad-Reward Bypass (Instant Cash, Restored Health/Mood, Fast Forward)"
+  ]
+}

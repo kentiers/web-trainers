@@ -1,0 +1,13 @@
+{
+  "name": "EvoWars.io",
+  "slug": "evowarsio",
+  "url": "https://www.crazygames.com/game/evowarsio",
+  "engine": "Construct 2 HTML5 Canvas + WebAssembly Network",
+  "version": "v2.18.14",
+  "tier": "Tier 4 (Server-Authoritative IO)",
+  "features": [
+    "Tactical Zoom / Extended FOV (0.4x - 1.5x Camera Distance)",
+    "Engine Timescale (SP Practice Mode)",
+    "Instant Ad-Reward Bypass (CrazyGames SDK v3)"
+  ]
+}

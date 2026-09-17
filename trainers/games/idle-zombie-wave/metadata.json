@@ -1,0 +1,18 @@
+{
+  "name": "Idle Zombie Wave: Survivors",
+  "slug": "idle-zombie-wave",
+  "url": "https://www.crazygames.com/game/idle-zombie-wave",
+  "engine": "Unity WebGL 6 (Puerts JS Binding)",
+  "author": "Trainer Modding Lab",
+  "versions": {
+    "v2.10": {
+      "status": "active",
+      "gameBuild": "136",
+      "unityVersion": "Unity 6",
+      "framework": "puerts-webgl",
+      "releaseDate": "2025-04",
+      "notes": "Direct bridge to CS (C#) reflection & webpack bundle interception"
+    }
+  },
+  "defaultVersion": "v2.10"
+}

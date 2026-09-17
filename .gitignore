@@ -32,11 +32,6 @@ GEMINI.md
 .cursorrules
 trainers/RE_FRAMEWORK_RULES.md
 
-# Internal Game Dev Modules (Raw Sources) & Console Loaders
-trainers/games/**/modules/
-trainers/games/**/trainer.user.js
-trainers/games/**/metadata.json
-trainers/games/**/console-loader.js
 
 # Environment Variables & Secrets
 .env*

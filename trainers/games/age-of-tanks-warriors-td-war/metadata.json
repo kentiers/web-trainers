@@ -1,0 +1,13 @@
+{
+  "name": "Age of Tanks Warriors: TD War",
+  "slug": "age-of-tanks-warriors-td-war",
+  "url": "https://www.crazygames.com/game/age-of-tanks-warriors-td-war",
+  "engine": "Unity WebGL (Native IL2CPP / WebAssembly)",
+  "buildVersion": "v1.05.01.452",
+  "storage": "IndexedDB (/idbfs/PlayerPrefs) + Firebase Remote Config",
+  "features": [
+    "Instant Ad-Reward Bypass (Free Coins, Upgrades, Card Packs)",
+    "Universal Precision Speedhack (performance.now & RAF Multiplier)",
+    "Anti-Adblock Bypass"
+  ]
+}
