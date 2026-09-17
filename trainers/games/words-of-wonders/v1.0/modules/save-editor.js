@@ -1,6 +1,6 @@
 /**
  * Words of Wonders - Save Editor & Storage Patcher
- * Targets CrazyGames SDK_DATA_21760 storage schema.
+ * Targets window.famobi.localStorage & CrazyGames SDK_DATA_21760.
  */
 export class WowSaveEditor {
   constructor(storageKey = 'SDK_DATA_21760') {
@@ -17,6 +17,16 @@ export class WowSaveEditor {
   }
 
   injectGemsAndHints(gems = 999999, hints = 999) {
+    // 1. Direct Famobi RAM Storage injection (Immediate)
+    if (typeof window !== 'undefined' && window.famobi?.localStorage) {
+      try {
+        window.famobi.localStorage.setItem('current_gem_count', gems.toString());
+        window.famobi.localStorage.setItem('free_hint_count', hints.toString());
+        window.famobi.localStorage.setItem('free_hammer_hint_count', hints.toString());
+      } catch (e) {}
+    }
+
+    // 2. LocalStorage SDK_DATA persistence
     const sdk = this.getSaveData();
     if (!sdk.data) sdk.data = {};
 
