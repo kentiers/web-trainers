@@ -4,23 +4,26 @@
   "url": "https://www.crazygames.com/game/words-and-blooms-tlc",
   "engine": "HTML5 Canvas (Phaser)",
   "version": "1.0",
-  "tier": "Tier 1 (LocalStorage Schema Injection)",
+  "tier": "Tier 2 (In-Memory Prototype Hook & Storage Patcher)",
   "files": {
     "standaloneUserscript": "v1.0/trainer.user.js",
     "consoleLoader": "v1.0/console-loader.js",
     "modules": [
-      "v1.0/modules/save-editor.js"
+      "v1.0/modules/gameplay-patcher.js"
     ]
   },
   "features": [
-    "Max Stats & 999K High Score (Classic, Timed, Word Rush)",
-    "Auto-Skip Tutorials & Bloom Intros",
+    "Infinite Hints (Badge locked at 999, never decreases upon use)",
+    "Infinite Shuffles (Badge locked at 999, never decreases upon use)",
+    "Infinite Letters (Letter bag pool never runs out in Classic mode)",
     "Stepped Timescale Speedhack (0.5x Slow-Mo / 1.0x / 2.0x / 5.0x)",
+    "Zero-Reload Live In-Memory Injection (No puzzle wipe)",
     "Universal Ad-Reward Bypass"
   ],
   "controls": {
-    "NUMPAD1": "Max Stats & 999K High Score",
-    "NUMPAD2": "Skip All Tutorials",
+    "NUMPAD1": "Infinite Hints (999 Hints)",
+    "NUMPAD2": "Infinite Shuffles (999 Shuffles)",
+    "NUMPAD3": "Infinite Letters (No Deplete)",
     "F11": "Cycle Timescale (0.5x / 1.0x / 2.0x / 5.0x)",
     "INSERT": "Show / Hide Tactical HUD"
   }

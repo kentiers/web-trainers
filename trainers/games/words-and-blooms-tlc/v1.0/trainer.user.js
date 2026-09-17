@@ -1,107 +1,90 @@
 // ==UserScript==
 // @name         Words and Blooms - FLiNG Style Web Trainer
 // @namespace    https://github.com/trainer-modding/web-trainers
-// @version      1.0.0
-// @description  Full-featured Web Trainer for Words and Blooms on CrazyGames (Max Stats, 999K Score, Skip Tutorials, Speedhack, Ad Bypass)
-// @author       Trainer Modding Lab
-// @match        https://www.crazygames.com/game/words-and-blooms-tlc*
-// @match        https://games.crazygames.com/*/words-and-blooms-tlc/*
-// @match        https://*.game-files.crazygames.com/words-and-blooms-tlc/*
+// @version      2.0.0
+// @description  Zero-Reload In-Memory Web Trainer for Words and Blooms (Infinite Hints, Infinite Shuffles, Infinite Letters, Timescale)
+// @author       Trainer Modding Suite
+// @match        https://*.crazygames.com/game/words-and-blooms-tlc*
+// @match        https://*.crazygames.com/*words-and-blooms*
+// @match        *://*/*words-and-blooms*
 // @run-at       document-start
+// @allFrames    true
 // @grant        none
 // ==/UserScript==
 
 (function () {
   'use strict';
 
-  class HotkeyManager {
-    constructor() {
-      this.bindings = new Map();
-      this.enabled = true;
-      this._onKeyDown = this._onKeyDown.bind(this);
-      window.addEventListener('keydown', this._onKeyDown, true);
-    }
+  // Inject in-memory property hooks immediately at boot time
+  function applyHooks() {
+    try {
+      Object.defineProperty(Object.prototype, 'hintsRemaining', {
+        get() { return 999; },
+        set() {},
+        configurable: true
+      });
+      Object.defineProperty(Object.prototype, 'bloomHintsRemaining', {
+        get() { return 999; },
+        set() {},
+        configurable: true
+      });
+      Object.defineProperty(Object.prototype, 'shufflesRemaining', {
+        get() { return 999; },
+        set() {},
+        configurable: true
+      });
+    } catch (e) {}
+  }
 
-    register(keyCombo, callback, description = '') {
-      const parts = keyCombo.toUpperCase().split('+').map(p => p.trim());
-      this.bindings.set(parts.join('+'), { callback, description });
-    }
+  applyHooks();
 
-    _onKeyDown(e) {
-      if (!this.enabled) return;
-      const tag = e.target.tagName?.toUpperCase();
-      if (tag === 'INPUT' || tag === 'TEXTAREA' || e.target.isContentEditable) return;
-      let key = e.key.toUpperCase();
-      if (e.code.startsWith('Numpad')) key = e.code.toUpperCase();
-      for (const [combo, item] of this.bindings) {
-        if (combo === key) {
-          e.preventDefault();
-          item.callback();
-          break;
+  function enableInfiniteLetters() {
+    try {
+      Object.defineProperty(Object.prototype, 'remaining', {
+        get() { return 999; },
+        set() {},
+        configurable: true
+      });
+      if (window.Phaser?.GAMES?.[0]) {
+        for (const scene of window.Phaser.GAMES[0].scene.scenes) {
+          if (scene.session?.bag) scene.session.bag.index = 0;
+          if (scene.lettersPanel && scene.session?.lettersLeft) {
+            scene.lettersPanel.setValue(scene.session.lettersLeft);
+          }
         }
       }
-    }
+    } catch (e) {}
   }
 
-  function injectMaxStats() {
-    const statsTemplate = {
-      gamesPlayed: 100,
-      totalScore: 5000000,
-      bestScore: 999999,
-      bestDrops: 999,
-      bestGameDate: new Date().toISOString(),
-      totalWordsMade: 5000,
-      totalLettersUsed: 25000,
-      longestWord: "BLOOMING",
-      highestWordScore: 50000,
-      highestScoringWord: "BLOOMING",
-      dlCreated: 500,
-      tlCreated: 500,
-      dwCreated: 500,
-      twCreated: 500
-    };
-
-    localStorage.setItem('wordsandcrowns.stats.v1', JSON.stringify(statsTemplate));
-    localStorage.setItem('wordsandcrowns.stats.timed.v1', JSON.stringify(statsTemplate));
-    localStorage.setItem('wordsandblooms.stats.rush.v1', JSON.stringify(statsTemplate));
-    console.log('[Words & Blooms] Max Stats & 999K Score Injected!');
-  }
-
-  function skipTutorials() {
-    localStorage.setItem('wordsandblooms.tutorial.done.v1', '1');
-    localStorage.setItem('wordsandblooms.bloomintro.hide', '1');
-    localStorage.setItem('wordsandblooms.rush.hideintro', '1');
-    localStorage.setItem('wordsandblooms.bloom.used', '1');
-    console.log('[Words & Blooms] All Tutorials Skipped!');
-  }
-
-  let speedState = 1.0;
-  const realNow = performance.now.bind(performance);
-  let realStart = realNow();
-  let virtualStart = realStart;
+  // Stepped Timescale
+  let currentSpeed = 1.0;
+  const SPEEDS = [0.5, 1.0, 2.0, 5.0];
+  let speedIdx = 1;
 
   function cycleSpeed() {
-    speedState = speedState === 1.0 ? 2.0 : (speedState === 2.0 ? 5.0 : (speedState === 5.0 ? 0.5 : 1.0));
-    const now = realNow();
-    virtualStart = virtualStart + (now - realStart) * speedState;
-    realStart = now;
-
-    if (speedState === 1.0) {
-      window.performance.now = realNow;
-    } else {
-      window.performance.now = function () {
-        const c = realNow();
-        return virtualStart + (c - realStart) * speedState;
-      };
+    speedIdx = (speedIdx + 1) % SPEEDS.length;
+    currentSpeed = SPEEDS[speedIdx];
+    if (window.Phaser?.GAMES?.[0]?.loop) {
+      window.Phaser.GAMES[0].loop.targetFps = 60 * currentSpeed;
     }
-    return speedState;
+    return currentSpeed;
   }
 
-  const hk = new HotkeyManager();
-  hk.register('NUMPAD1', () => injectMaxStats(), 'Max Stats');
-  hk.register('NUMPAD2', () => skipTutorials(), 'Skip Tutorials');
-  hk.register('F11', () => {
-    const s = cycleSpeed();
-    console.log(`[Words & Blooms] Speed: ${s.toFixed(1)}x`);
-  }, 'Cycle Timescale');
+  // Hotkey manager
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Numpad1') {
+      applyHooks();
+      console.log('[Words and Blooms] 999 Hints Activated!');
+    } else if (e.code === 'Numpad2') {
+      applyHooks();
+      console.log('[Words and Blooms] 999 Shuffles Activated!');
+    } else if (e.code === 'Numpad3') {
+      enableInfiniteLetters();
+      console.log('[Words and Blooms] Infinite Letters Activated!');
+    } else if (e.code === 'F11') {
+      e.preventDefault();
+      const s = cycleSpeed();
+      console.log(`[Words and Blooms] Timescale: ${s.toFixed(1)}x`);
+    }
+  }, true);
 })();
