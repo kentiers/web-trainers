@@ -16,6 +16,7 @@ Lightweight browser game trainers with a clean HUD overlay and hotkey support.
 | **Idle Zombie Wave: Survivors** | God Mode, One-Hit Kill, Repair Wall, +5K Scrap, Speedhack |
 | **Age of Tanks Warriors: TD War** | Speedhack (1x / 2x / 5x) |
 | **Dungeons and Bags** | Win Level, Heal Hero, Speedhack |
+| **Life Simulator: Road to Riches** | Speedhack (1x / 2x / 5x), Instant Ad Bypass |
 | **Universal Utility** | Instant Ad-Reward Bypass (CrazyGames & Poki) |
 
 ## Hotkeys
