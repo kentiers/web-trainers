@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Chicken Hell - FLiNG Style Web Trainer
 // @namespace    https://github.com/trainer-modding/web-trainers
-// @version      1.0.0
-// @description  Full-featured Web Trainer for Chicken Hell on CrazyGames (+999K Rings, 999 Spins, Turbo Boost, Speedhack, Ad Bypass)
+// @version      1.1.0
+// @description  Full-featured Web Trainer for Chicken Hell on CrazyGames (+999K Rings, Unlock All 7 Skins, 999 Spins, Turbo Boost, Speedhack, Ad Bypass)
 // @author       Trainer Modding Lab
 // @match        https://www.crazygames.com/game/chicken-hell*
 // @match        https://games.crazygames.com/*/chicken-hell/*
@@ -56,7 +56,33 @@
     if (window.CrazyGames?.SDK?.data?.setItem) {
       try { window.CrazyGames.SDK.data.setItem('INT_CURRENCY', amount.toString()); } catch (e) {}
     }
-    console.log('[Chicken Hell] +999K Gold Rings Injected!');
+    console.log('[Chicken Hell] +999K Gold Rings Injected! (F5 to apply)');
+  }
+
+  function unlockAllSkins() {
+    const raw = localStorage.getItem('SDK_DATA_65663') || '{"data":{}}';
+    const sdk = JSON.parse(raw);
+    if (!sdk.data) sdk.data = {};
+    const guids = [
+      "1382d6ce-37ab-6fb4-eaeb-489bddc16c4c", // Default
+      "279e6016-a25c-dd84-8acf-56d0f3f82227", // Alien
+      "ce19aa6b-03c9-8924-fa46-cf1d060548a9", // Pink
+      "5fb8c559-daa6-0204-aba9-d216c07f9773", // Yellow
+      "0e728ed8-256d-d944-69a8-a76b9e424302", // Green
+      "8abbdcc2-6147-72e4-7b3a-182da79ad814", // Turtle
+      "de442ee2-a439-cca4-2bf1-187616fce721"  // Purple
+    ];
+    for (const g of guids) {
+      sdk.data[`COSMETIC_ISUNLOCKED_${g}`] = "1";
+    }
+    sdk.metadata = { date: new Date().toISOString() };
+    localStorage.setItem('SDK_DATA_65663', JSON.stringify(sdk));
+    if (window.CrazyGames?.SDK?.data?.setItem) {
+      for (const g of guids) {
+        try { window.CrazyGames.SDK.data.setItem(`COSMETIC_ISUNLOCKED_${g}`, "1"); } catch (e) {}
+      }
+    }
+    console.log('[Chicken Hell] All 7 Skins Unlocked! (F5 to apply)');
   }
 
   function grantSpins(count = 999) {
@@ -69,7 +95,7 @@
     if (window.CrazyGames?.SDK?.data?.setItem) {
       try { window.CrazyGames.SDK.data.setItem('FREE_WHEEL_SPINS_LEFT', count.toString()); } catch (e) {}
     }
-    console.log('[Chicken Hell] 999 Free Wheel Spins Granted!');
+    console.log('[Chicken Hell] 999 Free Wheel Spins Granted! (F5 to apply)');
   }
 
   // 3. Turbo Boost
@@ -118,8 +144,9 @@
   let boostOn = false;
 
   hk.register('NUMPAD1', () => injectRings(), '+999K Rings');
-  hk.register('NUMPAD2', () => grantSpins(), '999 Spins');
-  hk.register('NUMPAD3', () => {
+  hk.register('NUMPAD2', () => unlockAllSkins(), 'Unlock All Skins');
+  hk.register('NUMPAD3', () => grantSpins(), '999 Spins');
+  hk.register('NUMPAD4', () => {
     boostOn = !boostOn;
     toggleBoost(boostOn);
     console.log(`[Chicken Hell] Turbo Boost: ${boostOn ? 'ON' : 'OFF'}`);

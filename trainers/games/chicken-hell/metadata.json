@@ -15,6 +15,7 @@
   },
   "features": [
     "+999K Gold Rings (Unlimited Economy)",
+    "Unlock All 7 Skins (Alien, Pink, Yellow, Green, Turtle, Purple, Default)",
     "999 Free Wheel Spins",
     "Turbo Boost Flinger (Continuous Flight Boost)",
     "Stepped Timescale Speedhack (1.0x / 2.0x / 5.0x)",
@@ -22,8 +23,9 @@
   ],
   "controls": {
     "NUMPAD1": "+999K Gold Rings",
-    "NUMPAD2": "999 Free Wheel Spins",
-    "NUMPAD3": "Toggle Turbo Boost",
+    "NUMPAD2": "Unlock All 7 Skins",
+    "NUMPAD3": "999 Free Wheel Spins",
+    "NUMPAD4": "Toggle Turbo Boost",
     "F11": "Cycle Timescale (1.0x / 2.0x / 5.0x)",
     "INSERT": "Show / Hide Tactical HUD"
   }
