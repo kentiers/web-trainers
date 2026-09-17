@@ -1,0 +1,22 @@
+{
+  "name": "web-trainers-analysis-suite",
+  "version": "1.0.0",
+  "description": "Universal Web Game Trainer Hub & WebAssembly / Unity IL2CPP Analysis Toolchain",
+  "scripts": {
+    "build": "node trainers/scripts/build.js",
+    "tool:wabt:version": "tools\\wabt\\bin\\wasm2wat.exe --version",
+    "tool:il2cpp:check": "tools\\Il2CppDumper\\Il2CppDumper.exe",
+    "analyze:wat": "node tools/scripts/analyze-wasm.js",
+    "analyze:il2cpp": "node tools/scripts/run-il2cppdumper.js"
+  },
+  "keywords": [
+    "webgl",
+    "webassembly",
+    "wabt",
+    "il2cppdumper",
+    "unity",
+    "trainer"
+  ],
+  "author": "Trainer Modding Lab",
+  "license": "MIT"
+}

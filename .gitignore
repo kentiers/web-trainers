@@ -5,6 +5,8 @@ yarn.lock
 pnpm-lock.yaml
 bun.lock*
 
+# Reverse Engineering & Analysis Tools
+tools/
 # AI Agent Configs & Internal Skills
 .agents/
 .claude/
