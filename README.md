@@ -13,7 +13,7 @@ Lightweight browser game trainer and WebGL/WebAssembly runtime diagnostic overla
 
 | Game | In-Game Features (HUD Labels) |
 | :--- | :--- |
-| **Words and Blooms** | Infinite Hints (999), Infinite Shuffles (999), Infinite Letters, Timescale (Zero-Reload) |
+| **Words and Blooms** | Infinite Hints, Infinite Shuffles, Infinite Letters, Timescale |
 | **Words of Wonders** | Free Hints (Spend to Gain Gems), 999 Free Hints & Hammers, Timescale |
 | **Hangman** | Free Clues (Spend to Gain Diamonds), Timescale |
 | **Tile Clash** | Free Hints (Spend to Gain Coins), Unlock 100 Levels & Max Streak, Timescale |
