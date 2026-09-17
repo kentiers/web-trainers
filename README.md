@@ -13,7 +13,8 @@ Lightweight browser game trainer and WebGL/WebAssembly runtime diagnostic overla
 
 | Game | In-Game Features (HUD Labels) |
 | :--- | :--- |
-| **Swarm Survivor** | Overclocked Mothership (+10K% HP, +5K% DMG, +2K% Magnet), +999K Funds, All 12 Weapons |
+| **Chicken Hell** | +999K Gold Rings, 999 Free Spins, Turbo Boost, Timescale |
+| **Swarm Survivor** | God Mode (Kebal + One-Hit Kill), +999K Coins & Gems, Timescale |
 | **Capybara Clicker 2** | Sprite-Locked Turbo Clicker (~60 clicks/s), +1K Burst, Timescale |
 | **Life Simulator: Road to Riches** | +$100M Cash (HDTB Serializer), Max Stats, Timescale |
 | **Idle Zombie Wave: Survivors** | God Mode, One-Hit Kill, Repair Wall, +5K Scrap, Timescale |

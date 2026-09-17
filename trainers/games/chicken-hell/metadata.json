@@ -1,0 +1,30 @@
+{
+  "name": "Chicken Hell",
+  "slug": "chicken-hell",
+  "url": "https://www.crazygames.com/game/chicken-hell",
+  "engine": "Unity 2020 WebGL (C# / WebAssembly)",
+  "version": "1.0",
+  "tier": "Tier 1 (CrazyGames SDK Storage Schema + Unity Input Bridge)",
+  "files": {
+    "standaloneUserscript": "v1.0/trainer.user.js",
+    "consoleLoader": "v1.0/console-loader.js",
+    "modules": [
+      "v1.0/modules/save-editor.js",
+      "v1.0/modules/engine-bridge.js"
+    ]
+  },
+  "features": [
+    "+999K Gold Rings (Unlimited Economy)",
+    "999 Free Wheel Spins",
+    "Turbo Boost Flinger (Continuous Flight Boost)",
+    "Stepped Timescale Speedhack (1.0x / 2.0x / 5.0x)",
+    "Instant Ad-Reward Bypass (Free Gift Boxes & Golden Eggs)"
+  ],
+  "controls": {
+    "NUMPAD1": "+999K Gold Rings",
+    "NUMPAD2": "999 Free Wheel Spins",
+    "NUMPAD3": "Toggle Turbo Boost",
+    "F11": "Cycle Timescale (1.0x / 2.0x / 5.0x)",
+    "INSERT": "Show / Hide Tactical HUD"
+  }
+}
