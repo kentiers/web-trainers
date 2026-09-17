@@ -13,10 +13,12 @@ Lightweight browser game trainer and WebGL/WebAssembly runtime diagnostic overla
 
 | Game | In-Game Features (HUD Labels) |
 | :--- | :--- |
+| **Capybara Clicker 2** | Turbo Clicker (~60 clicks/s), +500 Clicks Burst, Timescale |
+| **Life Simulator: Road to Riches** | +$100M Cash (HDTB Serializer), Max Stats, Timescale |
 | **Idle Zombie Wave: Survivors** | God Mode, One-Hit Kill, Repair Wall, +5K Scrap, Timescale |
 | **Age of Tanks Warriors: TD War** | Timescale (1x / 2x / 5x) |
 | **Dungeons and Bags** | Win Level, Heal Hero, Timescale |
-| **Universal Utility** | Instant Ad-Reward Bypass (CrazyGames & Poki) |
+| **Universal Utility** | Instant Ad-Reward Bypass & Dynamic Timescale for all CrazyGames/Poki titles |
 
 ## Hotkeys & Controls
 
