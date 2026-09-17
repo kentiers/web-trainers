@@ -1,6 +1,6 @@
 /**
  * Capybara Clicker 2 - BinaryFormatter Stats.dat Save Editor
- * Analyzes and mutates .NET BigInteger fields directly in IndexedDB /idbfs.
+ * Analyzes and mutates .NET BigInteger fields and 64-element cosmetic bit arrays in IndexedDB /idbfs.
  */
 export class CapybaraSaveEditor {
   constructor(dbName = '/idbfs', storeName = 'FILE_DATA') {
@@ -27,7 +27,7 @@ export class CapybaraSaveEditor {
     });
   }
 
-  async modifyCurrency(amount = 10000000) {
+  async unlockAllCosmeticsAndSpins(currencyBonus = 50000000, spins = 999, multiplier = 10000) {
     const filePath = await this.findSaveFilePath();
     if (!filePath) return false;
 
@@ -43,24 +43,51 @@ export class CapybaraSaveEditor {
           if (!fileObj || !fileObj.contents) return resolve(false);
 
           const u8 = new Uint8Array(fileObj.contents);
-          const pattern = [0x01, 0xfb, 0xff, 0xff, 0xff, 0xfc, 0xff, 0xff, 0xff];
-          let foundIdx = -1;
+          const view = new DataView(u8.buffer);
+
+          // 1. Patch wheelSpinsCount and ascensionMultiplier
+          const lastBiPattern = [0x01, 0xf2, 0xff, 0xff, 0xff, 0xfc, 0xff, 0xff, 0xff];
           for (let i = 4000; i < 5000; i++) {
-            let match = true;
-            for (let j = 0; j < pattern.length; j++) {
-              if (u8[i + j] !== pattern[j]) { match = false; break; }
+            let m = true;
+            for (let j = 0; j < lastBiPattern.length; j++) {
+              if (u8[i + j] !== lastBiPattern[j]) { m = false; break; }
             }
-            if (match) { foundIdx = i; break; }
+            if (m) {
+              const intBlockStart = i + lastBiPattern.length + 5;
+              view.setInt32(intBlockStart + 16, multiplier, true);
+              view.setInt32(intBlockStart + 32, spins, true);
+              break;
+            }
           }
 
-          if (foundIdx === -1) return resolve(false);
+          // 2. Unlock all 64-element cosmetic arrays (Skins, Backgrounds, Accessories)
+          const arrayPattern = [0x40, 0x00, 0x00, 0x00, 0x08];
+          for (let i = 0; i < u8.length - 10; i++) {
+            let m = true;
+            for (let j = 0; j < arrayPattern.length; j++) {
+              if (u8[i + j] !== arrayPattern[j]) { m = false; break; }
+            }
+            if (m) {
+              const dataOffset = i + arrayPattern.length;
+              for (let k = 0; k < 64; k++) {
+                view.setInt32(dataOffset + k * 4, 1, true);
+              }
+            }
+          }
 
-          const curOffset = foundIdx + pattern.length;
-          const view = new DataView(u8.buffer);
-          view.setInt32(curOffset, amount, true);
-
-          const lifeOffset = foundIdx - 5;
-          view.setInt32(lifeOffset, Math.max(view.getInt32(lifeOffset, true), amount), true);
+          // 3. Inject currency bonus
+          const curPattern = [0x01, 0xfb, 0xff, 0xff, 0xff, 0xfc, 0xff, 0xff, 0xff];
+          for (let i = 4000; i < 5000; i++) {
+            let m = true;
+            for (let j = 0; j < curPattern.length; j++) {
+              if (u8[i + j] !== curPattern[j]) { m = false; break; }
+            }
+            if (m) {
+              view.setInt32(i + curPattern.length, currencyBonus, true);
+              view.setInt32(i - 5, currencyBonus, true);
+              break;
+            }
+          }
 
           fileObj.timestamp = new Date();
           st.put(fileObj, filePath);
