@@ -16,13 +16,14 @@ Lightweight browser game trainers with a clean HUD overlay and hotkey support.
 | **Idle Zombie Wave: Survivors** | God Mode, One-Hit Kill, Repair Wall, +5K Scrap, Speedhack |
 | **Age of Tanks Warriors: TD War** | Speedhack (1x / 2x / 5x) |
 | **Dungeons and Bags** | Win Level, Heal Hero, Speedhack |
+| **EvoWars.io** | Tactical FOV (Zoom 1.0x / 0.7x / 0.5x), Speedhack |
 | **Universal Utility** | Instant Ad-Reward Bypass (CrazyGames & Poki) |
 
 ## Hotkeys
 
 * **`INSERT`** — Show / Hide Trainer
-* **`NUMPAD 1`** — Primary Cheat (God Mode / Win Level)
-* **`NUMPAD 2`** — Secondary Cheat (One-Hit Kill / Heal Hero)
+* **`NUMPAD 1`** — Primary Action (God Mode / Win Level / Tactical FOV)
+* **`NUMPAD 2`** — Secondary Action (One-Hit Kill / Heal Hero)
 * **`NUMPAD 3`** — Repair Wall (Idle Zombie Wave)
 * **`NUMPAD 4`** — Add Scrap (Idle Zombie Wave)
 * **`F11`** — Speedhack (1x / 2x / 5x)
