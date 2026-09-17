@@ -31,6 +31,8 @@ Lightweight browser game trainer and WebGL/WebAssembly runtime diagnostic overla
 * **`NUMPAD 4`** — Add Scrap (Idle Zombie Wave)
 * **`F11`** — Timescale (1x / 2x / 5x)
 
+> **Tip:** Tekan **F5** (refresh browser) jika saldo atau status cheat belum langsung ter-update di layar permainan.
+
 ## Binary Analysis Toolchain (Research & Development)
 
 Integrated CLI tools for inspecting game binaries:
