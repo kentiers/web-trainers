@@ -13,6 +13,7 @@ Lightweight browser game trainer and WebGL/WebAssembly runtime diagnostic overla
 
 | Game | In-Game Features (HUD Labels) |
 | :--- | :--- |
+| **Words and Blooms** | Max Stats & 999K Score (Classic/Timed/Rush), Skip All Tutorials, Timescale |
 | **Words of Wonders** | Free Hints (Spend to Gain Gems), 999 Free Hints & Hammers, Timescale |
 | **Hangman** | Free Clues (Spend to Gain Diamonds), Timescale |
 | **Tile Clash** | Free Hints (Spend to Gain Coins), Unlock 100 Levels & Max Streak, Timescale |
