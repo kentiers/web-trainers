@@ -13,10 +13,10 @@ Lightweight browser game trainer and WebGL/WebAssembly runtime diagnostic overla
 
 | Game | In-Game Features (HUD Labels) |
 | :--- | :--- |
-| **Words of Wonders** | +999K Gems, 999 Hints & Hammers, Timescale |
-| **Hangman** | +999K Diamonds, Timescale |
-| **Tile Clash** | +999K Coins, Unlock 100 Levels & Max Streak, Timescale |
-| **Chicken Hell** | +999K Gold Rings, Unlock All 7 Skins, 999 Free Spins, Turbo Boost, Timescale |
+| **Words of Wonders** | Free Hints (Spend to Gain Gems), 999 Free Hints & Hammers, Timescale |
+| **Hangman** | Free Clues (Spend to Gain Diamonds), Timescale |
+| **Tile Clash** | Free Hints (Spend to Gain Coins), Unlock 100 Levels & Max Streak, Timescale |
+| **Chicken Hell** | Free Upgrades (Spend to Gain Rings), Unlock All 7 Skins, 999 Spins, Turbo Boost, Timescale |
 | **Swarm Survivor** | God Mode (Kebal + One-Hit Kill), +999K Coins & Gems, Timescale |
 | **Capybara Clicker 2** | Sprite-Locked Turbo Clicker (~60 clicks/s), +1K Burst, Timescale |
 | **Life Simulator: Road to Riches** | +$100M Cash (HDTB Serializer), Max Stats, Timescale |
