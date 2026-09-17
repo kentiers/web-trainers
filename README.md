@@ -19,7 +19,7 @@ A collection of lightweight browser game trainers with a clean HUD overlay and h
 
 * **Idle Zombie Wave: Survivors** (CrazyGames) — God Mode, One-Hit Kill, Wall Repair, +5K Scrap, Speedhack
 * **Age of Tanks Warriors: TD War** (CrazyGames) — Stepped Speedhack (1.0x / 2.0x / 5.0x)
-* **Dungeons and Bags** (CrazyGames) — Instant Win Level, Clear Floor, Heal Hero, Speedhack
+* **Dungeons and Bags** (CrazyGames) — Instant Win Level, Heal Hero, Speedhack
 * **Universal Ad Bypass** (CrazyGames & Poki) — Skip video ads directly to reward
 
 ---
@@ -28,7 +28,7 @@ A collection of lightweight browser game trainers with a clean HUD overlay and h
 
 * **`INSERT`** — Show / Hide Trainer
 * **`NUMPAD 1`** — Primary Action (Win Level / God Mode)
-* **`NUMPAD 2`** — Secondary Action (Clear Floor / One-Hit Kill)
-* **`NUMPAD 3`** — Auxiliary Action (Heal Hero / Repair Wall)
+* **`NUMPAD 2`** — Secondary Action (Heal Hero / One-Hit Kill)
+* **`NUMPAD 3`** — Auxiliary Action (Repair Wall)
 * **`NUMPAD 4`** — Special Action (Add Scrap)
 * **`F11`** — Speedhack Cycle (1.0x / 2.0x / 5.0x)
