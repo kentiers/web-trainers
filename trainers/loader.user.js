@@ -4,12 +4,12 @@
 // @version      1.1.0
 // @description  Ultra-light dynamic loader with cache-busting
 // @author       Trainer Modding Lab
-// @match        https://www.crazygames.com/*
-// @match        https://games.crazygames.com/*
+// @match        https://*.crazygames.com/*
 // @match        https://*.game-files.crazygames.com/*
-// @match        https://poki.com/*
 // @match        https://*.poki.com/*
-// @run-at       document-start
+// @match        https://*.poki-gdn.com/*
+// @match        https://evowars.io/*
+// @match        https://*.evowars.io/*
 // @grant        none
 // ==/UserScript==
 
