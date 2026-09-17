@@ -15,6 +15,7 @@ skills-lock.json
 .cursor/
 mcp.json
 .omp/
+.serena/
 AGENTS.md
 
 # Internal Architecture, Unminified Cores & Dev Guides (Dapur Developer)
