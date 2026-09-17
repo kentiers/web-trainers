@@ -1,0 +1,25 @@
+{
+  "name": "Hangman",
+  "slug": "hangman-cfc",
+  "url": "https://www.crazygames.com/game/hangman-cfc",
+  "engine": "HTML5 Canvas",
+  "version": "1.2",
+  "tier": "Tier 1 (LocalStorage Schema Injection)",
+  "files": {
+    "standaloneUserscript": "v1.0/trainer.user.js",
+    "consoleLoader": "v1.0/console-loader.js",
+    "modules": [
+      "v1.0/modules/save-editor.js"
+    ]
+  },
+  "features": [
+    "+999K Diamonds (Unlimited Economy)",
+    "Stepped Timescale Speedhack (1.0x / 2.0x / 5.0x)",
+    "Universal Ad-Reward Bypass (Instant Clues & Daily Gifts)"
+  ],
+  "controls": {
+    "NUMPAD1": "+999K Diamonds",
+    "F11": "Cycle Timescale (1.0x / 2.0x / 5.0x)",
+    "INSERT": "Show / Hide Tactical HUD"
+  }
+}
